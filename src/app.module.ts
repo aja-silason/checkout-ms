@@ -9,12 +9,14 @@ import { Checkout } from './checkout/entities/checkout.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: process.env.DB_HOST,
       port: 3307,
       username: 'root',
       password: 'root',
       database: 'nest',
-      entities: [Checkout]
+      entities: [Checkout],
+      synchronize: true,
+      logging: true
     }),
     CheckoutModule,
   ],
