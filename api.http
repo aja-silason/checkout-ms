@@ -1,0 +1,15 @@
+GET http://localhost:3000/checkout
+
+###
+GET http://localhost:3000/checkout/1
+
+###
+
+
+
+###
+
+
+###
+
+
