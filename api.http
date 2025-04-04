@@ -4,8 +4,21 @@ GET http://localhost:3000/checkout
 GET http://localhost:3000/checkout/1
 
 ###
+POST http://localhost:3000/checkout
+Content-Type: application/json
 
-
+{
+    "items": [
+        {
+            "product_id": 1,
+            "quantity": 3
+        },
+        {
+            "product_id": 2,
+            "quantity": 8
+        }
+    ]
+}
 
 ###
 

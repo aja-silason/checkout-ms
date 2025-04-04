@@ -22,6 +22,16 @@ export class CheckoutController {
     return this.checkoutService.findOne(+id);
   }
 
+  @Post(':id/pay')
+  pay(@Param('id') id: string){
+    return this.checkoutService.pay(+id);
+  }
+
+  @Post(':id/fail')
+  fail(@Param('id') id: string){
+    return this.checkoutService.fail(+id);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateCheckoutDto: UpdateCheckoutDto) {
     return this.checkoutService.update(+id, updateCheckoutDto);

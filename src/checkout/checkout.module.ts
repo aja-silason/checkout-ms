@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 import { CheckoutService } from './checkout.service';
 import { CheckoutController } from './checkout.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Checkout } from './entities/checkout.entity';
+import { Checkout, CheckoutItem, CheckoutProduct } from './entities/checkout.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Checkout])
+    TypeOrmModule.forFeature([Checkout, CheckoutProduct, CheckoutItem])
   ],
   controllers: [CheckoutController],
   providers: [CheckoutService],
