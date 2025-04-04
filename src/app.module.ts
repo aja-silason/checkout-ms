@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { CheckoutModule } from './checkout/checkout.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Checkout, CheckoutItem, CheckoutProduct } from './checkout/entities/checkout.entity';
@@ -20,7 +18,7 @@ import { Checkout, CheckoutItem, CheckoutProduct } from './checkout/entities/che
     }),
     CheckoutModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
